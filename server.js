@@ -4,6 +4,7 @@ const routes = require('./routes');
 
 const server = express();
 
+server.use(express.urlencoded({ extended: true }));
 server.use(express.static('public'));
 server.use(routes);
 
@@ -16,5 +17,5 @@ nunjucks.configure("views", {
 });
 
 server.listen(4000, function () {
-    console.log("Server is Runnig");
+    console.log("Server is Runnig 😍");
 });
